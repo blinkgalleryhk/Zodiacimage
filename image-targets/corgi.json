@@ -1,0 +1,23 @@
+{
+  "type": "PLANAR",
+  "properties": {
+    "top": 0,
+    "left": 106,
+    "width": 841,
+    "height": 1122,
+    "isRotated": true,
+    "originalWidth": 1055,
+    "originalHeight": 1122
+  },
+  "imagePath": "image-targets/corgi_luminance.png",
+  "metadata": null,
+  "name": "corgi",
+  "resources": {
+    "originalImage": "corgi_original.png",
+    "croppedImage": "corgi_cropped.png",
+    "thumbnailImage": "corgi_thumbnail.png",
+    "luminanceImage": "corgi_luminance.png"
+  },
+  "created": 1786002605165,
+  "updated": 1786002605165
+}
