@@ -1,0 +1,23 @@
+{
+  "type": "PLANAR",
+  "properties": {
+    "top": 0,
+    "left": 115,
+    "width": 966,
+    "height": 1288,
+    "isRotated": true,
+    "originalWidth": 1197,
+    "originalHeight": 1288
+  },
+  "imagePath": "image-targets/greymonkey_luminance.png",
+  "metadata": null,
+  "name": "greymonkey",
+  "resources": {
+    "originalImage": "greymonkey_original.png",
+    "croppedImage": "greymonkey_cropped.png",
+    "thumbnailImage": "greymonkey_thumbnail.png",
+    "luminanceImage": "greymonkey_luminance.png"
+  },
+  "created": 1786010280179,
+  "updated": 1786010280179
+}

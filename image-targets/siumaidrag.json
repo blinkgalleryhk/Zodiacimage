@@ -1,0 +1,23 @@
+{
+  "type": "PLANAR",
+  "properties": {
+    "top": 0,
+    "left": 136,
+    "width": 878,
+    "height": 1171,
+    "isRotated": false,
+    "originalWidth": 1152,
+    "originalHeight": 1171
+  },
+  "imagePath": "image-targets/siumaidrag_luminance.png",
+  "metadata": null,
+  "name": "siumaidrag",
+  "resources": {
+    "originalImage": "siumaidrag_original.png",
+    "croppedImage": "siumaidrag_cropped.png",
+    "thumbnailImage": "siumaidrag_thumbnail.png",
+    "luminanceImage": "siumaidrag_luminance.png"
+  },
+  "created": 1786007956486,
+  "updated": 1786007956486
+}
