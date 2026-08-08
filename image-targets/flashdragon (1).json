@@ -1,0 +1,23 @@
+{
+  "type": "PLANAR",
+  "properties": {
+    "top": 0,
+    "left": 81,
+    "width": 641,
+    "height": 855,
+    "isRotated": true,
+    "originalWidth": 805,
+    "originalHeight": 855
+  },
+  "imagePath": "image-targets/flashdragon (1)_luminance.png",
+  "metadata": null,
+  "name": "flashdragon (1)",
+  "resources": {
+    "originalImage": "flashdragon (1)_original.png",
+    "croppedImage": "flashdragon (1)_cropped.png",
+    "thumbnailImage": "flashdragon (1)_thumbnail.png",
+    "luminanceImage": "flashdragon (1)_luminance.png"
+  },
+  "created": 1786179096331,
+  "updated": 1786179096331
+}

@@ -1,0 +1,23 @@
+{
+  "type": "PLANAR",
+  "properties": {
+    "top": 70,
+    "left": 0,
+    "width": 703,
+    "height": 937,
+    "isRotated": false,
+    "originalWidth": 703,
+    "originalHeight": 1078
+  },
+  "imagePath": "image-targets/oxfamily (1)_luminance.png",
+  "metadata": null,
+  "name": "oxfamily (1)",
+  "resources": {
+    "originalImage": "oxfamily (1)_original.png",
+    "croppedImage": "oxfamily (1)_cropped.png",
+    "thumbnailImage": "oxfamily (1)_thumbnail.png",
+    "luminanceImage": "oxfamily (1)_luminance.png"
+  },
+  "created": 1786179451054,
+  "updated": 1786179451054
+}

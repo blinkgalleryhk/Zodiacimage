@@ -1,0 +1,23 @@
+{
+  "type": "PLANAR",
+  "properties": {
+    "top": 0,
+    "left": 111,
+    "width": 911,
+    "height": 1215,
+    "isRotated": true,
+    "originalWidth": 1135,
+    "originalHeight": 1215
+  },
+  "imagePath": "image-targets/greyhorse (1)_luminance.png",
+  "metadata": null,
+  "name": "greyhorse (1)",
+  "resources": {
+    "originalImage": "greyhorse (1)_original.png",
+    "croppedImage": "greyhorse (1)_cropped.png",
+    "thumbnailImage": "greyhorse (1)_thumbnail.png",
+    "luminanceImage": "greyhorse (1)_luminance.png"
+  },
+  "created": 1786179180693,
+  "updated": 1786179180693
+}

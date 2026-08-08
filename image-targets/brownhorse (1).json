@@ -1,0 +1,23 @@
+{
+  "type": "PLANAR",
+  "properties": {
+    "top": 0,
+    "left": 148,
+    "width": 941,
+    "height": 1255,
+    "isRotated": true,
+    "originalWidth": 1238,
+    "originalHeight": 1255
+  },
+  "imagePath": "image-targets/brownhorse (1)_luminance.png",
+  "metadata": null,
+  "name": "brownhorse (1)",
+  "resources": {
+    "originalImage": "brownhorse (1)_original.png",
+    "croppedImage": "brownhorse (1)_cropped.png",
+    "thumbnailImage": "brownhorse (1)_thumbnail.png",
+    "luminanceImage": "brownhorse (1)_luminance.png"
+  },
+  "created": 1786179289188,
+  "updated": 1786179289188
+}

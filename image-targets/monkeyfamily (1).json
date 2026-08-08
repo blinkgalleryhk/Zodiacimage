@@ -1,0 +1,23 @@
+{
+  "type": "PLANAR",
+  "properties": {
+    "top": 0,
+    "left": 118,
+    "width": 921,
+    "height": 1229,
+    "isRotated": false,
+    "originalWidth": 1158,
+    "originalHeight": 1229
+  },
+  "imagePath": "image-targets/monkeyfamily (1)_luminance.png",
+  "metadata": null,
+  "name": "monkeyfamily (1)",
+  "resources": {
+    "originalImage": "monkeyfamily (1)_original.png",
+    "croppedImage": "monkeyfamily (1)_cropped.png",
+    "thumbnailImage": "monkeyfamily (1)_thumbnail.png",
+    "luminanceImage": "monkeyfamily (1)_luminance.png"
+  },
+  "created": 1786179230224,
+  "updated": 1786179230224
+}

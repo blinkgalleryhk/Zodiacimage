@@ -1,0 +1,23 @@
+{
+  "type": "PLANAR",
+  "properties": {
+    "top": 0,
+    "left": 124,
+    "width": 857,
+    "height": 1143,
+    "isRotated": false,
+    "originalWidth": 1106,
+    "originalHeight": 1143
+  },
+  "imagePath": "image-targets/pinkrabbit (1)_luminance.png",
+  "metadata": null,
+  "name": "pinkrabbit (1)",
+  "resources": {
+    "originalImage": "pinkrabbit (1)_original.png",
+    "croppedImage": "pinkrabbit (1)_cropped.png",
+    "thumbnailImage": "pinkrabbit (1)_thumbnail.png",
+    "luminanceImage": "pinkrabbit (1)_luminance.png"
+  },
+  "created": 1786179213573,
+  "updated": 1786179213573
+}

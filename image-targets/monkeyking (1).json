@@ -1,0 +1,23 @@
+{
+  "type": "PLANAR",
+  "properties": {
+    "top": 0,
+    "left": 113,
+    "width": 865,
+    "height": 1154,
+    "isRotated": false,
+    "originalWidth": 1092,
+    "originalHeight": 1154
+  },
+  "imagePath": "image-targets/monkeyking (1)_luminance.png",
+  "metadata": null,
+  "name": "monkeyking (1)",
+  "resources": {
+    "originalImage": "monkeyking (1)_original.png",
+    "croppedImage": "monkeyking (1)_cropped.png",
+    "thumbnailImage": "monkeyking (1)_thumbnail.png",
+    "luminanceImage": "monkeyking (1)_luminance.png"
+  },
+  "created": 1786179250565,
+  "updated": 1786179250565
+}

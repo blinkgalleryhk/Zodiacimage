@@ -1,0 +1,23 @@
+{
+  "type": "PLANAR",
+  "properties": {
+    "top": 0,
+    "left": 109,
+    "width": 872,
+    "height": 1163,
+    "isRotated": false,
+    "originalWidth": 1092,
+    "originalHeight": 1163
+  },
+  "imagePath": "image-targets/yeldragon (1)_luminance.png",
+  "metadata": null,
+  "name": "yeldragon (1)",
+  "resources": {
+    "originalImage": "yeldragon (1)_original.png",
+    "croppedImage": "yeldragon (1)_cropped.png",
+    "thumbnailImage": "yeldragon (1)_thumbnail.png",
+    "luminanceImage": "yeldragon (1)_luminance.png"
+  },
+  "created": 1786179264101,
+  "updated": 1786179264101
+}

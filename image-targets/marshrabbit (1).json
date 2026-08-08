@@ -1,0 +1,23 @@
+{
+  "type": "PLANAR",
+  "properties": {
+    "top": 0,
+    "left": 121,
+    "width": 921,
+    "height": 1229,
+    "isRotated": true,
+    "originalWidth": 1164,
+    "originalHeight": 1229
+  },
+  "imagePath": "image-targets/marshrabbit (1)_luminance.png",
+  "metadata": null,
+  "name": "marshrabbit (1)",
+  "resources": {
+    "originalImage": "marshrabbit (1)_original.png",
+    "croppedImage": "marshrabbit (1)_cropped.png",
+    "thumbnailImage": "marshrabbit (1)_thumbnail.png",
+    "luminanceImage": "marshrabbit (1)_luminance.png"
+  },
+  "created": 1786179164620,
+  "updated": 1786179164620
+}

@@ -1,0 +1,23 @@
+{
+  "type": "PLANAR",
+  "properties": {
+    "top": 103,
+    "left": 0,
+    "width": 730,
+    "height": 973,
+    "isRotated": false,
+    "originalWidth": 730,
+    "originalHeight": 1181
+  },
+  "imagePath": "image-targets/germanbun (1)_luminance.png",
+  "metadata": null,
+  "name": "germanbun (1)",
+  "resources": {
+    "originalImage": "germanbun (1)_original.png",
+    "croppedImage": "germanbun (1)_cropped.png",
+    "thumbnailImage": "germanbun (1)_thumbnail.png",
+    "luminanceImage": "germanbun (1)_luminance.png"
+  },
+  "created": 1786179277260,
+  "updated": 1786179277260
+}
