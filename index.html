@@ -1,152 +1,165 @@
-<!doctype html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Image Targets</title><meta itemprop="name" content="Image Targets"><meta name="twitter:title" content="Image Targets"><meta property="og:title" content="Image Targets"><meta property="og:site_name" content="Image Targets"><meta name="description" content="This project demonstrates how to use Image Targets to anchor virtual content to images in the real world."><meta itemprop="description" content="This project demonstrates how to use Image Targets to anchor virtual content to images in the real world."><meta property="og:description" content="This project demonstrates how to use Image Targets to anchor virtual content to images in the real world."><meta name="twitter:description" content="This project demonstrates how to use Image Targets to anchor virtual content to images in the real world."><script crossorigin="anonymous" src="./external/runtime/runtime.js"></script><script src="https://cdn.jsdelivr.net/npm/@8thwall/engine-binary@1/dist/xr.js" async crossorigin="anonymous" data-preload-chunks="slam"></script><script src="https://cdn.jsdelivr.net/npm/@8thwall/landing-page@1/dist/landing-page.js" crossorigin="anonymous"></script><meta property="og:image" content="https://8thwall.org/studio-image-targets-example/assets/preview.png"></head><body><script>window.addEventListener('unhandledrejection', function(event) {
-    var reason = event.reason;
-    if (reason instanceof Event || (reason && reason.isTrusted === true && typeof reason.type === 'string')) {
-      event.preventDefault();
-      event.stopImmediatePropagation();
-      console.warn('Ignored unhandled promise rejection with Event object:', reason);
-    }
-  }, true);</script><style>#inpage-console {
+<!doctype html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Image Targets</title><meta itemprop="name" content="Image Targets"><meta name="twitter:title" content="Image Targets"><meta property="og:title" content="Image Targets"><meta property="og:site_name" content="Image Targets"><meta name="description" content="This project demonstrates how to use Image Targets to anchor virtual content to images in the real world."><meta itemprop="description" content="This project demonstrates how to use Image Targets to anchor virtual content to images in the real world."><meta property="og:description" content="This project demonstrates how to use Image Targets to anchor virtual content to images in the real world."><meta name="twitter:description" content="This project demonstrates how to use Image Targets to anchor virtual content to images in the real world."><script crossorigin="anonymous" src="./external/runtime/runtime.js"></script><script src="https://cdn.jsdelivr.net/npm/@8thwall/engine-binary@1/dist/xr.js" async crossorigin="anonymous" data-preload-chunks="slam"></script><script src="https://cdn.jsdelivr.net/npm/@8thwall/landing-page@1/dist/landing-page.js" crossorigin="anonymous"></script><meta property="og:image" content="https://8thwall.org/studio-image-targets-example/assets/preview.png"></head><body><style>#scene-carousel-wrap {
     position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    max-height: 35vh;
-    font-family: system-ui, sans-serif;
-    background: rgba(0, 0, 0, 0.9);
-    color: #f1f1f1;
-    z-index: 99999;
-    display: flex;
-    flex-direction: column;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
-    overflow: hidden;
-    min-height: 32px;
+    left: 50%;
+    bottom: max(18px, env(safe-area-inset-bottom));
+    transform: translateX(-50%);
+    width: min(92vw, 100%);
+    z-index: 999999;
+    pointer-events: none;
   }
-  #inpage-console.collapsed {
-    max-height: 32px;
-  }
-  #inpage-console-header {
+
+  #scene-carousel {
     display: flex;
+    gap: 10px;
     align-items: center;
-    justify-content: space-between;
-    gap: 8px;
-    padding: 6px 10px;
-    background: rgba(255, 255, 255, 0.05);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    font-size: 13px;
+    overflow-x: auto;
+    padding: 8px 10px;
+    border-radius: 999px;
+    background: rgba(12, 18, 24, 0);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.28);
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    pointer-events: auto;
   }
-  #inpage-console-title {
-    font-weight: 600;
-  }
-  #inpage-console-buttons {
-    display: flex;
-    gap: 6px;
-  }
-  #inpage-console button {
-    border: 1px solid rgba(255,255,255,0.25);
-    background: rgba(255,255,255,0.08);
-    color: #fff;
-    padding: 4px 8px;
-    font-size: 12px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  #inpage-console button:hover {
-    background: rgba(255,255,255,0.16);
-  }
-  #inpage-console-messages {
-    flex: 1;
-    overflow-y: auto;
-    padding: 8px 10px 10px;
-    font-size: 12px;
-    line-height: 1.4;
-    word-break: break-word;
-  }
-  #inpage-console-messages div {
-    margin-bottom: 6px;
-  }
-  #inpage-console-messages .console-log {
-    color: #dcdcdc;
-  }
-  #inpage-console-messages .console-warn {
-    color: #f0c674;
-  }
-  #inpage-console-messages .console-error {
-    color: #ff6c6b;
-  }
-  #inpage-console-messages .console-info {
-    color: #8abeb7;
-  }
-  #inpage-console-messages .console-debug {
-    color: #81a2be;
-  }
-  #inpage-console-messages .console-collapsed {
+
+  #scene-carousel::-webkit-scrollbar {
     display: none;
-  }</style><div id="inpage-console" class="collapsed" aria-live="polite"><div id="inpage-console-header"><div id="inpage-console-title">Debug Console</div><div id="inpage-console-buttons"><button id="inpage-console-toggle" type="button">Show</button> <button id="inpage-console-clear" type="button">Clear</button></div></div><div id="inpage-console-messages" aria-label="Console messages"></div></div><script>;(function () {
-    const createMessage = (level, args) => {
-      const message = document.createElement('div')
-      message.className = `console-${level}`
-      const items = args.map((item) => {
-        if (typeof item === 'object' && item !== null) {
-          try {
-            return JSON.stringify(item, null, 2)
-          } catch (e) {
-            return String(item)
-          }
-        }
-        return String(item)
-      })
-      message.textContent = items.join(' ')
-      return message
+  }
+
+  .scene-icon {
+    flex: 0 0 auto;
+    width: 70px;
+    height: 70px;
+    border: 5px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    scroll-snap-align: center;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
+    touch-action: manipulation;
+    user-select: none;
+  }
+
+  .scene-icon::before {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    border-radius: 50%;
+    border: 1.5px dashed rgba(255, 255, 255, 0.38);
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  .scene-icon.active {
+    border-color: rgba(127, 165, 117, 1);
+    transform: scale(1.08);
+  }
+
+  .scene-icon:active {
+    transform: scale(0.96);
+  }</style><div id="scene-carousel-wrap" aria-label="Scene selector carousel"><div id="scene-carousel" aria-live="polite"></div></div><script>;(function () {
+    const sceneCarousel = document.getElementById('scene-carousel')
+    if (!sceneCarousel) return
+
+    const sceneImageMap = {
+      'ox': './assets/oxfamily_1.png',
+      'rabbitpink': './assets/pinkrabbit_1.png',
+      'marshrabbit': './assets/marshrabbit_1.png',
+      'germanrabbit': './assets/germanbun_1.png',
+      'lightlingdragon': './assets/flashdragon_1.png',
+      'siumaidragon': './assets/siumaidrag.png',
+      'yellowdragon': './assets/yeldragon_1.png',
+      'brownhorse': './assets/brownhorse_1.png',
+      'greyhorse': './assets/greyhorse_1.png',
+      'monkeyfamily': './assets/monkeyfamily_1.png',
+      'monkeyking': './assets/monkeyking_1.png',
+      'greymonkey': './assets/greymonkey_1.png',
+      'corgi': './assets/corgi_1.png',
+      'Zodiacspin': './assets/zodiacspin_1.png',
+
     }
 
-    const consoleBox = document.getElementById('inpage-console')
-    const messages = document.getElementById('inpage-console-messages')
-    const toggleButton = document.getElementById('inpage-console-toggle')
-    const clearButton = document.getElementById('inpage-console-clear')
-
-    const append = (level, args) => {
-      if (!messages) return
-      const entry = createMessage(level, args)
-      messages.appendChild(entry)
-      messages.scrollTop = messages.scrollHeight
+    const getCurrentScene = () => {
+      const app = window.ecs && window.ecs.application
+      if (!app || typeof app.getScene !== 'function') return null
+      return app.getScene()
     }
 
-    const wrapMethod = (methodName, level) => {
-      const original = console[methodName]
-      console[methodName] = function (...args) {
-        append(level, args)
-        if (original && typeof original.apply === 'function') {
-          original.apply(console, args)
-        }
+    const setSceneButtonImage = (button, sceneName) => {
+      const imagePath = sceneImageMap[sceneName] || sceneImageMap[sceneName.toLowerCase()] || ''
+      if (imagePath) {
+        button.style.backgroundImage = `url("${imagePath}")`
+        button.style.backgroundColor = 'transparent'
+      } else {
+        button.style.backgroundImage = 'none'
+        button.style.backgroundColor = 'rgba(255, 255, 255, 0.06)'
       }
     }
 
-    wrapMethod('log', 'log')
-    wrapMethod('info', 'info')
-    wrapMethod('warn', 'warn')
-    wrapMethod('error', 'error')
-    wrapMethod('debug', 'debug')
+    const centerSelectedScene = () => {
+      const activeButton = sceneCarousel.querySelector('.scene-icon.active')
+      if (!activeButton) return
 
-    window.addEventListener('error', function (event) {
-      append('error', [event.message || 'Error', event.filename || '', event.lineno || '', event.colno || ''])
-    })
-
-    window.addEventListener('unhandledrejection', function (event) {
-      append('warn', ['Unhandled promise rejection:', event.reason])
-    })
-
-    if (toggleButton && consoleBox) {
-      toggleButton.addEventListener('click', function () {
-        const isCollapsed = consoleBox.classList.toggle('collapsed')
-        toggleButton.textContent = isCollapsed ? 'Show' : 'Hide'
-      })
+      const offsetLeft = activeButton.offsetLeft
+      const offsetWidth = activeButton.offsetWidth
+      const scrollTarget = offsetLeft - (sceneCarousel.clientWidth / 2) + (offsetWidth / 2)
+      sceneCarousel.scrollTo({left: scrollTarget, behavior: 'smooth'})
     }
 
-    if (clearButton && messages) {
-      clearButton.addEventListener('click', function () {
-        messages.textContent = ''
+    const renderSceneButtons = () => {
+      const scene = getCurrentScene()
+      if (!scene || typeof scene.listSpaces !== 'function') return
+
+      const spaces = scene.listSpaces ? scene.listSpaces() : []
+      if (!spaces || spaces.length === 0) return
+
+      sceneCarousel.innerHTML = ''
+
+      const sceneOrder = Object.keys(sceneImageMap).map((sceneName) => sceneName.toLowerCase())
+      const orderedSpaces = [...spaces].sort((firstSpace, secondSpace) => {
+        const firstIndex = sceneOrder.indexOf((firstSpace.name || firstSpace.id || '').toLowerCase())
+        const secondIndex = sceneOrder.indexOf((secondSpace.name || secondSpace.id || '').toLowerCase())
+        const normalizedFirstIndex = firstIndex === -1 ? sceneOrder.length : firstIndex
+        const normalizedSecondIndex = secondIndex === -1 ? sceneOrder.length : secondIndex
+        return normalizedFirstIndex - normalizedSecondIndex
       })
+
+      orderedSpaces.forEach((space) => {
+        const button = document.createElement('button')
+        button.type = 'button'
+        button.className = 'scene-icon'
+        button.title = space.name || space.id
+        button.setAttribute('aria-label', space.name || space.id)
+
+        const sceneName = space.name || space.id
+        setSceneButtonImage(button, sceneName)
+
+        const activeSpace = scene.getActiveSpace ? scene.getActiveSpace() : null
+        const isActive = !!activeSpace && (space.id === activeSpace.id || space.name === activeSpace.name)
+        if (isActive) button.classList.add('active')
+
+        button.addEventListener('click', function () {
+          scene.loadSpace(space.id || space.name)
+          renderSceneButtons()
+          window.setTimeout(centerSelectedScene, 0)
+        })
+
+        sceneCarousel.appendChild(button)
+      })
+
+      window.setTimeout(centerSelectedScene, 0)
     }
 
-    console.log('Debug console initialized')
+    const refreshSceneButtons = () => {
+      renderSceneButtons()
+    }
+
+    refreshSceneButtons()
+    window.addEventListener('focus', refreshSceneButtons)
+    window.addEventListener('resize', refreshSceneButtons)
   }())</script><script src="bundle.js"></script></body></html>

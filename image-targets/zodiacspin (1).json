@@ -1,0 +1,23 @@
+{
+  "type": "PLANAR",
+  "properties": {
+    "top": 0,
+    "left": 98,
+    "width": 606,
+    "height": 808,
+    "isRotated": true,
+    "originalWidth": 803,
+    "originalHeight": 808
+  },
+  "imagePath": "image-targets/zodiacspin (1)_luminance.png",
+  "metadata": null,
+  "name": "zodiacspin (1)",
+  "resources": {
+    "originalImage": "zodiacspin (1)_original.png",
+    "croppedImage": "zodiacspin (1)_cropped.png",
+    "thumbnailImage": "zodiacspin (1)_thumbnail.png",
+    "luminanceImage": "zodiacspin (1)_luminance.png"
+  },
+  "created": 1787218993377,
+  "updated": 1787218993377
+}
