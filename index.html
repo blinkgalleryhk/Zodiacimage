@@ -56,7 +56,7 @@
   }
 
   .scene-icon.active {
-    border-color: rgba(127, 165, 117, 1);
+    border-color: rgb(212, 166, 214);
     transform: scale(1.08);
   }
 
@@ -67,11 +67,12 @@
     if (!sceneCarousel) return
 
     const sceneImageMap = {
+      'mice': './assets/ricemice_1.png',
       'ox': './assets/oxfamily_1.png',
       'rabbitpink': './assets/pinkrabbit_1.png',
       'marshrabbit': './assets/marshrabbit_1.png',
       'germanrabbit': './assets/germanbun_1.png',
-      'lightlingdragon': './assets/flashdragon_1.png',
+      'lightningdragon': './assets/flashdragon_1.png',
       'siumaidragon': './assets/siumaidrag.png',
       'yellowdragon': './assets/yeldragon_1.png',
       'brownhorse': './assets/brownhorse_1.png',
@@ -160,6 +161,7 @@
     }
 
     refreshSceneButtons()
+    window.setTimeout(refreshSceneButtons, 0)
     window.addEventListener('focus', refreshSceneButtons)
     window.addEventListener('resize', refreshSceneButtons)
   }())</script><script src="bundle.js"></script></body></html>

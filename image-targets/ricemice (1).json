@@ -1,0 +1,23 @@
+{
+  "type": "PLANAR",
+  "properties": {
+    "top": 0,
+    "left": 118,
+    "width": 828,
+    "height": 1104,
+    "isRotated": true,
+    "originalWidth": 1065,
+    "originalHeight": 1104
+  },
+  "imagePath": "image-targets/ricemice (1)_luminance.png",
+  "metadata": null,
+  "name": "ricemice (1)",
+  "resources": {
+    "originalImage": "ricemice (1)_original.png",
+    "croppedImage": "ricemice (1)_cropped.png",
+    "thumbnailImage": "ricemice (1)_thumbnail.png",
+    "luminanceImage": "ricemice (1)_luminance.png"
+  },
+  "created": 1787306769530,
+  "updated": 1787306769530
+}
