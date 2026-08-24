@@ -1,4 +1,26 @@
-<!doctype html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Image Targets</title><meta itemprop="name" content="Image Targets"><meta name="twitter:title" content="Image Targets"><meta property="og:title" content="Image Targets"><meta property="og:site_name" content="Image Targets"><meta name="description" content="This project demonstrates how to use Image Targets to anchor virtual content to images in the real world."><meta itemprop="description" content="This project demonstrates how to use Image Targets to anchor virtual content to images in the real world."><meta property="og:description" content="This project demonstrates how to use Image Targets to anchor virtual content to images in the real world."><meta name="twitter:description" content="This project demonstrates how to use Image Targets to anchor virtual content to images in the real world."><script crossorigin="anonymous" src="./external/runtime/runtime.js"></script><script src="https://cdn.jsdelivr.net/npm/@8thwall/engine-binary@1/dist/xr.js" async crossorigin="anonymous" data-preload-chunks="slam"></script><script src="https://cdn.jsdelivr.net/npm/@8thwall/landing-page@1/dist/landing-page.js" crossorigin="anonymous"></script><meta property="og:image" content="https://8thwall.org/studio-image-targets-example/assets/preview.png"></head><body><style>#scene-carousel-wrap {
+<!doctype html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Image Targets</title><meta itemprop="name" content="Image Targets"><meta name="twitter:title" content="Image Targets"><meta property="og:title" content="Image Targets"><meta property="og:site_name" content="Image Targets"><meta name="description" content="This project demonstrates how to use Image Targets to anchor virtual content to images in the real world."><meta itemprop="description" content="This project demonstrates how to use Image Targets to anchor virtual content to images in the real world."><meta property="og:description" content="This project demonstrates how to use Image Targets to anchor virtual content to images in the real world."><meta name="twitter:description" content="This project demonstrates how to use Image Targets to anchor virtual content to images in the real world."><script crossorigin="anonymous" src="./external/runtime/runtime.js"></script><script src="https://cdn.jsdelivr.net/npm/@8thwall/engine-binary@1/dist/xr.js" async crossorigin="anonymous" data-preload-chunks="slam"></script><script src="https://cdn.jsdelivr.net/npm/@8thwall/landing-page@1/dist/landing-page.js" crossorigin="anonymous"></script><meta property="og:image" content="https://8thwall.org/studio-image-targets-example/assets/preview.png"></head><body><style>#startup-loading {
+    position: fixed;
+    inset: 0;
+    z-index: 1000000;
+    overflow: hidden;
+    background: rgb(17, 22, 28);
+    transition: opacity 0.35s ease, visibility 0.35s ease;
+  }
+
+  #startup-loading.is-ready {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  #startup-loading-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  #scene-carousel-wrap {
     position: fixed;
     left: 50%;
     bottom: max(18px, env(safe-area-inset-bottom));
@@ -56,19 +78,20 @@
   }
 
   .scene-icon.active {
-    border-color: rgb(212, 166, 214);
+    border-color: #ffd9e3;
     transform: scale(1.08);
   }
 
   .scene-icon:active {
     transform: scale(0.96);
-  }</style><div id="scene-carousel-wrap" aria-label="Scene selector carousel"><div id="scene-carousel" aria-live="polite"></div></div><script>;(function () {
+  }</style><div id="startup-loading" role="status" aria-live="polite" aria-label="Loading experience"><video id="startup-loading-video" autoplay muted loop playsinline preload="auto" aria-label="Loading experience animation"><source src="./assets/Zodiac_loading_screen.mp4" type="video/mp4"></video></div><div id="scene-carousel-wrap" aria-label="Scene selector carousel"><div id="scene-carousel" aria-live="polite"></div></div><script>;(function () {
     const sceneCarousel = document.getElementById('scene-carousel')
     if (!sceneCarousel) return
 
     const sceneImageMap = {
+      'bailong': './assets/bailong_1.png',
       'mice': './assets/ricemice_1.png',
-      'ox': './assets/oxfamily_1.png',
+      'ox': './assets/oxfamilyicon2.png',
       'rabbitpink': './assets/pinkrabbit_1.png',
       'marshrabbit': './assets/marshrabbit_1.png',
       'germanrabbit': './assets/germanbun_1.png',
@@ -164,4 +187,18 @@
     window.setTimeout(refreshSceneButtons, 0)
     window.addEventListener('focus', refreshSceneButtons)
     window.addEventListener('resize', refreshSceneButtons)
+  }())</script><script>;(function () {
+    const loadingScreen = document.getElementById('startup-loading')
+    if (!loadingScreen) return
+
+    let dismissed = false
+    const dismiss = () => {
+      if (dismissed) return
+      dismissed = true
+      loadingScreen.classList.add('is-ready')
+      window.setTimeout(() => loadingScreen.remove(), 400)
+    }
+
+    window.dismissStartupLoading = dismiss
+    window.setTimeout(dismiss, 1000)
   }())</script><script src="bundle.js"></script></body></html>

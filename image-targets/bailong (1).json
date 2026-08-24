@@ -1,0 +1,23 @@
+{
+  "type": "PLANAR",
+  "properties": {
+    "top": 0,
+    "left": 76,
+    "width": 781,
+    "height": 1042,
+    "isRotated": true,
+    "originalWidth": 934,
+    "originalHeight": 1042
+  },
+  "imagePath": "image-targets/bailong (1)_luminance.png",
+  "metadata": null,
+  "name": "bailong (1)",
+  "resources": {
+    "originalImage": "bailong (1)_original.png",
+    "croppedImage": "bailong (1)_cropped.png",
+    "thumbnailImage": "bailong (1)_thumbnail.png",
+    "luminanceImage": "bailong (1)_luminance.png"
+  },
+  "created": 1787559377571,
+  "updated": 1787559377571
+}
