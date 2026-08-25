@@ -1,0 +1,23 @@
+{
+  "type": "PLANAR",
+  "properties": {
+    "top": 0,
+    "left": 120,
+    "width": 810,
+    "height": 1081,
+    "isRotated": true,
+    "originalWidth": 1052,
+    "originalHeight": 1081
+  },
+  "imagePath": "image-targets/pigsleep (1)_luminance.png",
+  "metadata": null,
+  "name": "pigsleep (1)",
+  "resources": {
+    "originalImage": "pigsleep (1)_original.png",
+    "croppedImage": "pigsleep (1)_cropped.png",
+    "thumbnailImage": "pigsleep (1)_thumbnail.png",
+    "luminanceImage": "pigsleep (1)_luminance.png"
+  },
+  "created": 1787650228357,
+  "updated": 1787650228357
+}

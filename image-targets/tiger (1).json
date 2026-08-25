@@ -1,0 +1,23 @@
+{
+  "type": "PLANAR",
+  "properties": {
+    "top": 0,
+    "left": 125,
+    "width": 870,
+    "height": 1161,
+    "isRotated": true,
+    "originalWidth": 1121,
+    "originalHeight": 1161
+  },
+  "imagePath": "image-targets/tiger (1)_luminance.png",
+  "metadata": null,
+  "name": "tiger (1)",
+  "resources": {
+    "originalImage": "tiger (1)_original.png",
+    "croppedImage": "tiger (1)_cropped.png",
+    "thumbnailImage": "tiger (1)_thumbnail.png",
+    "luminanceImage": "tiger (1)_luminance.png"
+  },
+  "created": 1787650346892,
+  "updated": 1787650346892
+}

@@ -1,0 +1,23 @@
+{
+  "type": "PLANAR",
+  "properties": {
+    "top": 0,
+    "left": 123,
+    "width": 872,
+    "height": 1163,
+    "isRotated": false,
+    "originalWidth": 1120,
+    "originalHeight": 1163
+  },
+  "imagePath": "image-targets/chefpig (1)_luminance.png",
+  "metadata": null,
+  "name": "chefpig (1)",
+  "resources": {
+    "originalImage": "chefpig (1)_original.png",
+    "croppedImage": "chefpig (1)_cropped.png",
+    "thumbnailImage": "chefpig (1)_thumbnail.png",
+    "luminanceImage": "chefpig (1)_luminance.png"
+  },
+  "created": 1787650151180,
+  "updated": 1787650151180
+}

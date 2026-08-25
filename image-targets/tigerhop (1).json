@@ -1,0 +1,23 @@
+{
+  "type": "PLANAR",
+  "properties": {
+    "top": 0,
+    "left": 111,
+    "width": 717,
+    "height": 956,
+    "isRotated": true,
+    "originalWidth": 940,
+    "originalHeight": 956
+  },
+  "imagePath": "image-targets/tigerhop (1)_luminance.png",
+  "metadata": null,
+  "name": "tigerhop (1)",
+  "resources": {
+    "originalImage": "tigerhop (1)_original.png",
+    "croppedImage": "tigerhop (1)_cropped.png",
+    "thumbnailImage": "tigerhop (1)_thumbnail.png",
+    "luminanceImage": "tigerhop (1)_luminance.png"
+  },
+  "created": 1787650313878,
+  "updated": 1787650313878
+}
